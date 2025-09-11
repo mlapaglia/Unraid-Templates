@@ -7,10 +7,11 @@
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/193283-support-borgitory-web-based-borg-scheduling/</Support>
+  <ExtraSearchTerms>borgbackup borg</ExtraSearchTerms>
   <Project>https://github.com/mlapaglia/Borgitory</Project>
   <Overview>A comprehensive web-based management interface for BorgBackup repositories with real-time monitoring, automated scheduling, and cloud synchronization capabilities.</Overview>
   <Category>Backup: Cloud: Tools: Status:Beta</Category>
-  <TemplateURL>https://raw.githubusercontent.com/mlapaglia/Unraid-Templates/refs/heads/main/borgitory.xml</Template>
+  <TemplateURL>https://raw.githubusercontent.com/mlapaglia/Unraid-Templates/refs/heads/main/borgitory.xml</TemplateURL>
   <WebUI>http://[IP]:[PORT:8000]</WebUI>
   <Icon>https://i.imgur.com/uRIqKjf.png</Icon>
   <ExtraParams>--cap-add SYS_ADMIN</ExtraParams>
