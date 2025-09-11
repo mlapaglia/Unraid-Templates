@@ -4,7 +4,6 @@
   <Repository>mlapaglia/borgitory:latest</Repository>
   <Registry>https://hub.docker.com/r/mlapaglia/borgitory</Registry>
   <Network>bridge</Network>
-  <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/193283-support-borgitory-web-based-borg-scheduling/</Support>
@@ -12,13 +11,8 @@
   <Overview>A comprehensive web-based management interface for BorgBackup repositories with real-time monitoring, automated scheduling, and cloud synchronization capabilities.</Overview>
   <Category>Backup: Cloud: Tools: Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:8000]</WebUI>
-  <TemplateURL/>
   <Icon>https://i.imgur.com/uRIqKjf.png</Icon>
   <ExtraParams>--cap-add SYS_ADMIN</ExtraParams>
-  <PostArgs/>
-  <DateInstalled />
-  <DonateText/>
-  <DonateLink/>
   <Requires/>
   <Config Name="HTTP" Target="8000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">6657</Config>
   <Config Name="Borg Repositories" Target="/repos" Default="" Mode="rw" Description="For a single Borg repository this can be the root of that repository. As many repositories can be mounted as additional volumes also." Type="Path" Display="always" Required="false" Mask="false">/mnt/disks/7HK9SLXF/</Config>
@@ -31,3 +25,4 @@
   <TailscaleStateDir/>
 
 </Container>
+
