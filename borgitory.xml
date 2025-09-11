@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Borgitory</Name>
-  <Repository>mlapaglia/borgitory:1.1.0</Repository>
+  <Repository>mlapaglia/borgitory:latest</Repository>
   <Registry>https://hub.docker.com/r/mlapaglia/borgitory</Registry>
   <Network>bridge</Network>
   <MyIP/>
@@ -14,19 +14,19 @@
   <WebUI>http://[IP]:[PORT:6657]</WebUI>
   <TemplateURL/>
   <Icon>https://i.imgur.com/uRIqKjf.png</Icon>
-  <ExtraParams/>
+  <ExtraParams>--cap-add SYS_ADMIN</ExtraParams>
   <PostArgs/>
-  <CPUset />
   <DateInstalled />
   <DonateText/>
   <DonateLink/>
   <Requires/>
   <Config Name="HTTP" Target="8000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">6657</Config>
-  <Config Name="Borg Repositories" Target="/repos" Default="" Mode="rw" Description="For a single Borg repository this can be the root of that repository. As many repositories can be mounted as additional volumes also." Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="Data Sources" Target="/borg-sources" Default="" Mode="ro" Description="The location of the data to back up. You can point this at a particular folder, or mount any source volumes wherever you want." Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="Appdata" Target="/app/data" Default="" Mode="rw" Description="The persistent storage location for the borgitory database." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/borgitory</Config>
-  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Sets the user ID the container runs as, controlling who owns created files (99 = Unraid's " Type="Variable" Display="always-hide" Required="true" Mask="false">99</Config>
-  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Sets the group ID the container runs as, controlling group ownership of created files (100 = Unraid's " Type="Variable" Display="always-hide" Required="true" Mask="false">100</Config>
-  <Config Name="UMASK" Target="UMASK" Default="022" Mode="" Description="Controls default permissions for new files and folders created by the container (022 = owner can read/write, others read-only)." Type="Variable" Display="always-hide" Required="true" Mask="false">022</Config>
+  <Config Name="Borg Repositories" Target="/repos" Default="" Mode="rw" Description="For a single Borg repository this can be the root of that repository. As many repositories can be mounted as additional volumes also." Type="Path" Display="always" Required="false" Mask="false">/mnt/disks/7HK9SLXF/</Config>
+  <Config Name="Data Sources" Target="/data" Default="" Mode="ro" Description="The location of the data to back up. Can be pointed  at a particular folder, or mount any source volumes wherever you want." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Pictures</Config>
+  <Config Name="Appdata" Target="/app/app/data" Default="" Mode="rw" Description="The persistent storage location for the borgitory database." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/borgitory</Config>
+  <Config Name="FUSE" Target="/dev/fuse:/dev/fuse:rwm" Default="" Mode="" Description="Used for mounting borg repositories inside the container." Type="Device" Display="advanced-hide" Required="false" Mask="false">/dev/fuse:/dev/fuse:rwm</Config>
+  <Config Name="UMASK" Target="UMASK" Default="022" Mode="" Description="Controls default permissions for new files and folders created by the container (022 = owner can read/write, others read-only)." Type="Variable" Display="advanced-hide" Required="true" Mask="false">022</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Sets the group ID the container runs as, controlling group ownership of created files (100 = Unraid's " Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Sets the user ID the container runs as, controlling who owns created files (99 = Unraid's " Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <TailscaleStateDir/>
 </Container>
