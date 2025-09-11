@@ -13,8 +13,7 @@
   <WebUI>http://[IP]:[PORT:8000]</WebUI>
   <Icon>https://i.imgur.com/uRIqKjf.png</Icon>
   <ExtraParams>--cap-add SYS_ADMIN</ExtraParams>
-  <Requires/>
-  <Config Name="HTTP" Target="8000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">6657</Config>
+  <Config Name="HTTP" Target="8000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false" />
   <Config Name="Borg Repositories" Target="/repos" Default="" Mode="rw" Description="For a single Borg repository this can be the root of that repository. As many repositories can be mounted as additional volumes also." Type="Path" Display="always" Required="false" Mask="false">/mnt/disks/7HK9SLXF/</Config>
   <Config Name="Data Sources" Target="/data" Default="" Mode="ro" Description="The location of the data to back up. Can be pointed  at a particular folder, or mount any source volumes wherever you want." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Pictures</Config>
   <Config Name="Appdata" Target="/app/app/data" Default="" Mode="rw" Description="The persistent storage location for the borgitory database." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/borgitory</Config>
@@ -23,6 +22,4 @@
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Sets the group ID the container runs as, controlling group ownership of created files (100 = Unraid's " Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Sets the user ID the container runs as, controlling who owns created files (99 = Unraid's " Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <TailscaleStateDir/>
-
 </Container>
-
