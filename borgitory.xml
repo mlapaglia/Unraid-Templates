@@ -11,7 +11,7 @@
   <Project>https://github.com/mlapaglia/Borgitory</Project>
   <Overview>A comprehensive web-based management interface for BorgBackup repositories with real-time monitoring, automated scheduling, and cloud synchronization capabilities.</Overview>
   <Category>Backup: Cloud: Tools: Status:Beta</Category>
-  <WebUI>http://[IP]:[PORT:6657]</WebUI>
+  <WebUI>http://[IP]:[PORT:8000]</WebUI>
   <TemplateURL/>
   <Icon>https://i.imgur.com/uRIqKjf.png</Icon>
   <ExtraParams>--cap-add SYS_ADMIN</ExtraParams>
@@ -29,4 +29,5 @@
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Sets the group ID the container runs as, controlling group ownership of created files (100 = Unraid's " Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Sets the user ID the container runs as, controlling who owns created files (99 = Unraid's " Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <TailscaleStateDir/>
+
 </Container>
