@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Borgitory</Name>
-  <Repository>mlapaglia/borgitory:latest</Repository>
+  <Repository>mlapaglia/borgitory</Repository>
   <Registry>https://hub.docker.com/r/mlapaglia/borgitory</Registry>
   <Network>bridge</Network>
   <Shell>sh</Shell>
@@ -24,4 +24,5 @@
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Sets the user ID the container runs as, controlling who owns created files (99 = Unraid's " Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <TailscaleStateDir/>
 </Container>
+
 
