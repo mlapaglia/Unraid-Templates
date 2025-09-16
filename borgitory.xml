@@ -13,14 +13,15 @@
   <Category>Backup: Cloud: Tools: Status:Beta</Category>
   <TemplateURL>https://raw.githubusercontent.com/mlapaglia/Unraid-Templates/refs/heads/main/borgitory.xml</TemplateURL>
   <WebUI>http://[IP]:[PORT:8000]</WebUI>
-  <Icon>https://i.imgur.com/uRIqKjf.png</Icon>
+  <Icon>https://i.imgur.com/0rqIQ95.png</Icon>
   <ExtraParams>--cap-add SYS_ADMIN</ExtraParams>
   <Config Name="HTTP" Target="8000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false" />
-  <Config Name="Borg Repositories" Target="/repos" Default="" Mode="rw" Description="For a single Borg repository this can be the root of that repository. As many repositories can be mounted as additional volumes also." Type="Path" Display="always" Required="false" Mask="false" />
-  <Config Name="Data Sources" Target="/data" Default="" Mode="ro" Description="The location of the data to back up. Can be pointed  at a particular folder, or mount any source volumes wherever you want." Type="Path" Display="always" Required="false" Mask="false" />
-  <Config Name="Appdata" Target="/app/app/data" Default="" Mode="rw" Description="The persistent storage location for the borgitory database." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/borgitory</Config>
+  <Config Name="Borg Repositories" Target="/mnt/repos" Default="" Mode="rw" Description="For a single Borg repository this can be the root of that repository. As many repositories can be mounted as additional volumes also. Every repository must be mounted inside of /mnt/" Type="Path" Display="always" Required="false" Mask="false" />
+  <Config Name="Data Sources" Target="/mnt/data" Default="" Mode="ro" Description="The location of the data to back up. Can be pointed  at a particular folder, or mount any source volumes wherever you want. Every data source must be mounted inside of /mnt/" Type="Path" Display="always" Required="false" Mask="false" />
+  <Config Name="Appdata" Target="/app/data" Default="" Mode="rw" Description="The persistent storage location for the borgitory database." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/borgitory</Config>
   <Config Name="FUSE" Target="/dev/fuse:/dev/fuse:rwm" Default="" Mode="" Description="Used for mounting borg repositories inside the container." Type="Device" Display="advanced-hide" Required="false" Mask="false">/dev/fuse:/dev/fuse:rwm</Config>
   <Config Name="UMASK" Target="UMASK" Default="022" Mode="" Description="Controls default permissions for new files and folders created by the container (022 = owner can read/write, others read-only)." Type="Variable" Display="advanced-hide" Required="true" Mask="false">022</Config>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Sets the group ID the container runs as, controlling group ownership of created files (100 = Unraid's " Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Sets the user ID the container runs as, controlling who owns created files (99 = Unraid's " Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
 </Container>
+
